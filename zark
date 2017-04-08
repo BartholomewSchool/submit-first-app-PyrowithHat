@@ -1,0 +1,68 @@
+package zark;
+import java.util.Random; //imports the random function
+import java.util.Scanner; //imports the scanner function
+public class Zark { //starts the Zark class
+
+public static void main(String[] args) {//this starts the main method
+
+Scanner user_input = new Scanner(System.in); //these all make a bunch of inputs work
+Scanner user_input1 = new Scanner(System.in);
+Scanner room_select1 = new Scanner(System.in);
+Scanner room_select2 = new Scanner(System.in);
+Scanner room_select3 = new Scanner(System.in);
+String[] rooms = new String[6]; //this is an array for the pseudorandom room generation
+rooms[0] = "You face a brick wall. Well done, you found the least funny/interesting part of the game.";
+rooms[1] = "You face a room that's entirely empty, save from a large bust of Ainsley Harriot. The bust takes up about 60% of the room.";
+rooms[2] = "Within this room, there is a 75 metre long tapestry depicting Channing Tatum declaring his name to be 'Jeff' in the 2014 AD movie '22 Jump Street'.";
+rooms[3] = "This room is the jungle room, from the 2003 episode of the Mighty Boosh. The Mod Wolves jump out of the trees and sing their song, then just walk off.";
+rooms[4] = "A pure gold statue of a shiba inu dog is in this room, with 'such doge' inscribed upon its gilded brow in comic sans.";
+rooms[5] = "The floor in this room is lava.";
+String var_input; //more inputs
+String var_input2;
+String var_input3;
+int var_room1; //these are the room values 
+int var_room2;
+int var_room3;
+System.out.println("Type Start to start."); //self explanatory
+var_input = user_input.next(); //this makes it so the next thing typed is an input to the program
+if(var_input.equals ("Start")){ //starts the whooole thing off right here whoa
+System.out.println("Welcome To Zark - Jeff Adventures.");
+System.out.println("Input a number from 0 to 5.");
+var_room1 = room_select1.nextInt(); //inputs numbers to the room variables
+System.out.println("Input another number from 1 to 5.");
+var_room2 = room_select2.nextInt();
+System.out.println("Last one!");
+var_room3 = room_select3.nextInt();
+System.out.println("Which way would you likee to go (n/s/e/w)?");
+var_input2= user_input1.nextLine();
+switch (var_input2){ //basically a big if statement with all the rooms
+
+case "e":
+System.out.println("Within this room is a large monitor, showing nothing but static.");
+Scanner user_input2 = new Scanner(System.in);
+var_input3= user_input2.nextLine();
+String var_vine = "do it for the vine";
+if (var_vine.equals(var_input3)) {
+    System.out.println("The large monitor flickers to life, and starts to display a 'my name is jeff' vine compilation. Speakers erupt from the floor with such force that they cause earthquakes and volcanic eruptions around the world; you have brought about the end of mankind: The Jeff Apocalypse. Foretold in ages long past by the fabled Cult of Jeff, writings about the prophecy of the Jeff Apocalypse had faded into obscurity long before you stepped foot in these ancient ruins. They tell the story of how in the far future, 'My name is Jeff' vine compilations will bring about the end times. You probably should have read up on some history before delving into the depths and used the forbidden magicks of 'vineomancy', a magical practice banned in early 2017 AD, the fabled 'year of respite' after 2016 AD, 'the year no one liked'. Your misuse of this sacred yet forbidden art has now brought about the third apocalypse event and possibly the worst humanity has faced within the past 4 years. G A M E  O V E R.");
+}
+
+break;
+case "n":
+System.out.println(rooms[var_room1]);
+break;
+case "s":
+System.out.println(rooms[var_room2]);
+break;
+case "w":
+System.out.println(rooms[var_room3]);
+break;
+
+}
+
+
+}
+
+
+}
+
+}
